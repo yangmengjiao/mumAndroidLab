@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         et2 = findViewById(R.id.output);
     }
 
+
+
     @Override
     public void onClick(View v) {
         String et1Text = et1.getText().toString();
