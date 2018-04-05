@@ -49,6 +49,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
                 break;
             case  R.id.button2:
+
                 int index = (int)(Math.random()*(array.size()));
                 String food = array.get(index);
                 et1.setText(food);
