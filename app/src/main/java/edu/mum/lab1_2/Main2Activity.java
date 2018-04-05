@@ -42,12 +42,19 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         int id = v.getId();
         switch (id){
             case R.id.button1:
+                String text = et1.getText().toString();
+                if(!text.isEmpty()&&!array.contains(text)){
+                    array.add(text);
+                }
 
                 break;
             case  R.id.button2:
+                int index = (int)(Math.random()*(array.size()));
+                String food = array.get(index);
+                et1.setText(food);
                 break;
-                default:
-                    break;
+            default:
+                break;
 
         }
     }
