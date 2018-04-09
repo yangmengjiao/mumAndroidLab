@@ -31,6 +31,7 @@ public class SimpleFoodAdpter extends RecyclerView.Adapter<SimpleFoodAdpter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(data[position]);
+        holder.icon.setImageResource(R.drawable.walmart);
     }
 
     @Override
