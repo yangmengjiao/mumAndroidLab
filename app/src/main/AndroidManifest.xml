@@ -12,17 +12,22 @@
         <activity android:name=".lab1_2.Main2Activity" />
         <activity android:name=".lab1_1.MainActivity" />
         <activity android:name=".lab2_1.Main2_1_Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".lab2_1.CreateAccountActivity"
             android:label="@string/title_activity_create_account"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".lab2_1.ShopingActivity"></activity>
+
+        <activity android:name=".lab4_1.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".lab4_2.DetailActivity"></activity>
+        <activity android:name=".lab4_2.ShoppingActivity"></activity>
     </application>
 
 </manifest>

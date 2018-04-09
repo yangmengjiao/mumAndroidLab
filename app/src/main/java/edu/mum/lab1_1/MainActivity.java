@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import edu.mum.R;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn1;
