@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <array name="moives">
-        <item>Blocks</item>
-        <item>Ready Player One</item>
-        <item>Rampage</item>
-        <item>Infinity War</item>
-        <item>Peter Rabbit</item>
-    </array>
-
-    <array name="beauty">
-        <item>Lipstick</item>
-        <item>Eye Shadow</item>
-        <item>Lipstick</item>
-        <item>Eye Shadow</item>
-        <item>Lipstick</item>
-        <item>Eye Shadow</item>
-        <item>Lipstick</item>
-        <item>Eye Shadow</item>
-        <item>Lipstick</item>
-        <item>Eye Shadow</item>
-    </array>
 
     <array name="clothing">
-        <item>Shoose</item>
+        <item>Skirt</item>
         <item>Suit</item>
-        <item>Sport Wear</item>
         <item>Pants</item>
     </array>
 
-    <array name="food">
-        <item>Noodles</item>
-        <item>Cookies</item>
-        <item>Candies</item>
-        <item>Snacks</item>
+    <array name="beauty">
+        <item>Mask1</item>
+        <item>Mask2</item>
+        <item>Mask3</item>
+        <item>Mask4</item>
+        <item>Mask5</item>
+        <item>Mask6</item>
+        <item>Mask7</item>
+        <item>Mask8</item>
     </array>
+
+    <array name="food">
+        <item>Fruit</item>
+        <item>Rice</item>
+        <item>Cookie</item>
+        <item>Noddle</item>
+        <item>PopCoin</item>
+        <item>Spicy Chicken</item>
+    </array>s
 
 </resources>

@@ -13,12 +13,12 @@ import java.util.Locale;
 import edu.mum.R;
 
 
-public class DetailActivity extends Activity {
+public class ElectronicActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_electronic);
         Intent intent = getIntent();
         Product product = (Product) intent.getSerializableExtra("product");
         ImageView icon = findViewById(R.id.im_icon);

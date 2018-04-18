@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="app.mumandroidassignment.lesson5.bykotlin.question2.ui.activity.DetailActivity">
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/im_icon"

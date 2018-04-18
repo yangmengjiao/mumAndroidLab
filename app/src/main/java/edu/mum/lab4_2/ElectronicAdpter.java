@@ -3,7 +3,6 @@ package edu.mum.lab4_2;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,9 +49,8 @@ public class ElectronicAdpter extends RecyclerView.Adapter<ElectronicAdpter.View
 
     @Override
     public void onClick(View v) {
-        Log.d("112233", "onClick");
         Product product = (Product) v.getTag();
-        Intent intent = new Intent(v.getContext(), DetailActivity.class);
+        Intent intent = new Intent(v.getContext(), ElectronicActivity.class);
         intent.putExtra("product", product);
         v.getContext().startActivity(intent);
     }
@@ -61,7 +59,6 @@ public class ElectronicAdpter extends RecyclerView.Adapter<ElectronicAdpter.View
         public ViewHolder(View itemView) {
             super(itemView);
         }
-
         private ImageView icon = itemView.findViewById(R.id.im_icon);
         private TextView title = itemView.findViewById(R.id.tv_title);
         private TextView price = itemView.findViewById(R.id.tv_price);

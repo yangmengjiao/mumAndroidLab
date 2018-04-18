@@ -2,9 +2,6 @@ package edu.mum.lab4_2;
 
 import java.io.Serializable;
 
-/**
- * Created by CodingHome on 4/9/18.
- */
 
 class Product implements Serializable{
     public Product(String title, Float price, String color, String imageUrl, String itemId, String dec) {

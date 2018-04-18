@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class ShoppingActivity extends AppCompatActivity implements ActionBar.Tab
         setContentView(R.layout.activity_shopping2);
         rootLayout = findViewById(R.id.root);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Shopping");
+        actionBar.setTitle("Shopping by Categories");
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         actionBar.addTab(actionBar.newTab().setText("Electronics").setTabListener(this));
         actionBar.addTab(actionBar.newTab().setText("Clothing").setTabListener(this));
@@ -102,7 +103,7 @@ public class ShoppingActivity extends AppCompatActivity implements ActionBar.Tab
         rv.setLayoutManager(new LinearLayoutManager(this));
         List<Product> list = new ArrayList<>();
         list.add(new Product("RGA Voyager 7 16GB Android Tablet", 35.0f, "Black", "http://www.pcmuseum.ca/gallery/0610-02-750.JPG", "555948101",
-                "Introducing the RGA Voyager 7-inch Google Certified Table"));
+                "Introducing the RGA Voyager 7-inch Google Certified Table.Operating on Anroid’s 6.0(Marshmallow),you can enjoy more of what the Google Play store has to offer."));
         list.add(new Product("HP Flyer Red 15.6 Latop", 299.0f, "Black & Red", "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05474585.png", "555948102",
                 "Introducing the HP Flyer Red 1298.6-inch Laptop"));
         list.add(new Product("VIZIO 70 Class 4K", 35.0f, "Black", "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5947/5947110_sd.jpg", "555948103",
@@ -131,21 +132,36 @@ public class ShoppingActivity extends AppCompatActivity implements ActionBar.Tab
 
     private void loadBeautyView() {
         View view = getLayoutInflater().inflate(R.layout.activity_beauty, rootLayout, false);
+        Spinner spinner = view.findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(view.getContext(),parent.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         addView(view);
     }
+
+
 
     private void loadFoodView() {
         View view = getLayoutInflater().inflate(R.layout.activity_food, rootLayout, false);
         RecyclerView recyclerView = view.findViewById(R.id.rv_foods);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        SimpleFoodAdpter simpleFoodAdpter = new SimpleFoodAdpter(getResources().getStringArray(R.array.food));
+        FoodAdapter simpleFoodAdpter = new FoodAdapter(getResources().getStringArray(R.array.food));
         recyclerView.setAdapter(simpleFoodAdpter);
         addView(view);
     }
 
     private void handleLogout(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Do you want to Exit ?");
+        alertDialogBuilder.setMessage("Do you want to log out ?");
         alertDialogBuilder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

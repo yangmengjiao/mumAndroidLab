@@ -14,17 +14,17 @@ import edu.mum.R;
 
 public class MainActivity extends Activity {
 
-    private AutoCompleteTextView autoCompleteTextView;
+    private AutoCompleteTextView actv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson5_q1);
-        autoCompleteTextView = findViewById(R.id.actv_move);
-        final String[] moives = {"AAA", "BBB", "CCC", "DDD", "EEE"};
+        setContentView(R.layout.activity_auto_complete);
+        actv = findViewById(R.id.actv_movie);
+        final String[] moives = {"Spider Man", "Hunted House", "Beauty and Beast", "Future", "Alice","Little Price"};
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, moives);
-        autoCompleteTextView.setAdapter(arrayAdapter);
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        actv.setAdapter(arrayAdapter);
+        actv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(MainActivity.this, moives[position], Toast.LENGTH_SHORT).show();

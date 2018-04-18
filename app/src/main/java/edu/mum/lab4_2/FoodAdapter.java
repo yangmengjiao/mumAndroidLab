@@ -12,11 +12,11 @@ import android.widget.TextView;
 import edu.mum.R;
 
 
-public class SimpleFoodAdpter extends RecyclerView.Adapter<SimpleFoodAdpter.ViewHolder> {
+public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
     private String[] data;
 
-    public SimpleFoodAdpter(String[] data) {
+    public FoodAdapter(String[] data) {
         this.data = data;
     }
 

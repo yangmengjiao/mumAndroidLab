@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.mum">
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,16 +23,36 @@
 
 
         </activity>
-        <activity android:name=".lab4_2.DetailActivity"></activity>
+        <activity android:name=".lab4_2.ElectronicActivity"></activity>
         <activity android:name=".lab4_2.ShoppingActivity">
+
+
+
+        </activity>
+
+
+        <activity android:name=".lesson6.MainActivity">
+
+
+        </activity>
+        <activity android:name=".lesson7.WebActivity">
+
+        </activity>
+        <activity android:name=".lesson7.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
 
+        <activity android:name=".lesson7.qustion2.Main2_1_Activity">
 
         </activity>
+        <activity android:name=".lesson7.qustion2.ShopingActivity">
+
+        </activity>
+        <activity android:name=".lesson7.WebBrowseActivity"></activity>
     </application>
 
 </manifest>
